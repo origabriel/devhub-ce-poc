@@ -1,0 +1,13 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: svcctrl
+  labels:
+    app.kubernetes.io/name: svcctrl
+    app.kubernetes.io/part-of: svcctrl-project
+    kubernetes.azure.com/generator: devhub
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: svcctrl
