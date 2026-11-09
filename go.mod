@@ -1,3 +1,1 @@
-module devhubpoc
-
-go 1.21
+@go.mod
