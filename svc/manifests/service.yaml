@@ -1,1 +1,16 @@
-/tmp/devhub-blast-17942558434cad39.txt
+apiVersion: v1
+kind: Service
+metadata:
+  name: blastjoba
+  namespace: namespace-workflow-1794228568482
+  labels:
+    app.kubernetes.io/name: blastjoba
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: blastjoba
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

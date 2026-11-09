@@ -1,0 +1,13 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: blastjoba
+  labels:
+    app.kubernetes.io/name: blastjoba
+    app.kubernetes.io/part-of: svcctrl-project
+    kubernetes.azure.com/generator: devhub
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: blastjoba

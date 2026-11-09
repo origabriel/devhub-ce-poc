@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: blastjoba-config
+  namespace: namespace-workflow-1794228568482
+  labels:
+    app.kubernetes.io/name: blastjoba
+    kubernetes.azure.com/generator: devhub
+data:
