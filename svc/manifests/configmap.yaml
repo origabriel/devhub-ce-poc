@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: blastjobb-config
+  namespace: namespace-workflow-1794228568482
+  labels:
+    app.kubernetes.io/name: blastjobb
+    kubernetes.azure.com/generator: devhub
+data:

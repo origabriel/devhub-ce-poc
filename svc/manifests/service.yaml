@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blastjobb
+  namespace: namespace-workflow-1794228568482
+  labels:
+    app.kubernetes.io/name: blastjobb
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: blastjobb
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
