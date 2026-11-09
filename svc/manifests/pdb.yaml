@@ -1,0 +1,13 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: cleanjobb
+  labels:
+    app.kubernetes.io/name: cleanjobb
+    app.kubernetes.io/part-of: svcctrl-project
+    kubernetes.azure.com/generator: devhub
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: cleanjobb

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cleanjobb-config
+  namespace: namespace-workflow-1794228568482
+  labels:
+    app.kubernetes.io/name: cleanjobb
+    kubernetes.azure.com/generator: devhub
+data:
