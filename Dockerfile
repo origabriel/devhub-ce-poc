@@ -1,0 +1,2 @@
+FROM gradle:8-jdk17
+EXPOSE 8080
