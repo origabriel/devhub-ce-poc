@@ -1,1 +1,0 @@
-SENTINEL: if a generated manifest appears here, the output-dir symlink was followed by the managed worker.
